@@ -1,0 +1,27 @@
+<shipment>
+    <tracking_code>IT1234567890ABCDEFGH</tracking_code>
+    <sender>
+        <name>Mario Rossi</name>
+        <address>Via Roma, 123 - 00100 Roma</address>
+    </sender>
+    <recipient>
+        <name>Anna Bianchi</name>
+        <address>Corso Vittorio Emanuele, 456 - 20122 Milano</address>
+    </recipient>
+    <package>
+        <weight>10</weight>
+        <dimensions>
+            <length>30</length>
+            <width>20</width>
+            <height>15</height>
+        </dimensions>
+    </package>
+    <route>
+        <leg>
+            <place>Pisa, airport</place>
+            <timestamp>2022-03-07T12:00:15</timestamp>
+            <vehicle>plane</vehicle>
+        </leg>
+        </route>
+    <status>in delivery</status>
+</shipment>
