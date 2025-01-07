@@ -1,0 +1,72 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Hotel" type="HotelType"/>
+
+  <xs:complexType name="HotelType">
+    <xs:sequence>
+      <xs:element name="Nome" type="xs:string"/>
+      <xs:element name="Indirizzo" type="xs:string"/>
+      <xs:element name="NumeroStelle" type="xs:int"/>
+      <xs:element name="CamereDisponibili" type="CamereDisponibiliType"/>
+      <xs:element name="Prenotazioni" type="PrenotazioniType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CamereDisponibiliType">
+    <xs:sequence>
+      <xs:element name="Camera" maxOccurs="unbounded" type="CameraType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CameraType">
+    <xs:sequence>
+      <xs:element name="Numero" type="CameraNumberType"/>
+      <xs:element name="Tipo" type="TipoCameraType"/>
+      <xs:element name="PrezzoPerNotte" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="CameraNumberType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TipoCameraType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="singola"/>
+      <xs:enumeration value="doppia"/>
+      <xs:enumeration value="suite"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="PrenotazioniType">
+    <xs:sequence>
+      <xs:element name="Prenotazione" maxOccurs="unbounded" type="PrenotazioneType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PrenotazioneType">
+    <xs:sequence>
+      <xs:element name="NomeCliente" type="xs:string"/>
+      <xs:element name="CognomeCliente" type="CognomeClienteType"/>
+      <xs:element name="DataInizio" type="xs:date"/>
+      <xs:element name="DataFine" type="xs:date"/>
+      <xs:element name="NumeroCamera" type="CameraNumberType"/>
+      <xs:element name="Email" type="EmailType"/>
+      <xs:element name="CostoTotale" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="CognomeClienteType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z'-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

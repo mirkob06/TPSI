@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel>
+  <Nome>Hotel Serenità</Nome>
+  <Indirizzo>Via delle Palme 123, Firenze</Indirizzo>
+  <NumeroStelle>4</NumeroStelle>
+  <CamereDisponibili>
+    <Camera>
+      <Numero>101</Numero>
+      <Tipo>singola</Tipo>
+      <PrezzoPerNotte>85.50</PrezzoPerNotte>
+    </Camera>
+    <Camera>
+      <Numero>102</Numero>
+      <Tipo>doppia</Tipo>
+      <PrezzoPerNotte>120.00</PrezzoPerNotte>
+    </Camera>
+    <Camera>
+      <Numero>201</Numero>
+      <Tipo>suite</Tipo>
+      <PrezzoPerNotte>250.00</PrezzoPerNotte>
+    </Camera>
+  </CamereDisponibili>
+  <Prenotazioni>
+    <Prenotazione>
+      <NomeCliente>Marco</NomeCliente>
+      <CognomeCliente>Rossi</CognomeCliente>
+      <DataInizio>2025-01-15</DataInizio>
+      <DataFine>2025-01-20</DataFine>
+      <NumeroCamera>101</NumeroCamera>
+      <Email>marco.rossi@example.com</Email>
+      <CostoTotale>427.50</CostoTotale>
+    </Prenotazione>
+    <Prenotazione>
+      <NomeCliente>Giulia</NomeCliente>
+      <CognomeCliente>Verdi</CognomeCliente>
+      <DataInizio>2025-01-10</DataInizio>
+      <DataFine>2025-01-17</DataFine>
+      <NumeroCamera>102</NumeroCamera>
+      <Email>giulia.verdi@example.com</Email>
+      <CostoTotale>840.00</CostoTotale>
+    </Prenotazione>
+  </Prenotazioni>
+</Hotel>
