@@ -1,0 +1,43 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="weather_station">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="station">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string"/>
+              <xs:element name="location">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="latitude" type="xs:decimal"/>
+                    <xs:element name="longitude" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="date" type="xs:date"/>
+              <xs:element name="readings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="reading" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="time" type="xs:string"/>
+                          <xs:element name="temperature" type="xs:decimal"/>
+                          <xs:element name="humidity" type="xs:integer"/>
+                          <xs:element name="pressure" type="xs:integer"/>
+                          <xs:element name="wind_speed" type="xs:integer"/>
+                          <xs:element name="wind_direction" type="xs:integer"/>
+                          <xs:element name="rainfall" type="xs:decimal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

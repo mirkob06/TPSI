@@ -1,0 +1,30 @@
+<weather_station>
+  <station>
+    <id>WS-001</id>
+    <location>
+      <latitude>45.4642</latitude>
+      <longitude>9.1900</longitude>
+    </location>
+    <date>2025-01-01</date>
+    <readings>
+      <reading>
+        <time>06:00</time>
+        <temperature>-3.5</temperature>
+        <humidity>80</humidity>
+        <pressure>1015</pressure>
+        <wind_speed>15</wind_speed>
+        <wind_direction>90</wind_direction>
+        <rainfall>0</rainfall>
+      </reading>
+      <reading>
+        <time>12:00</time>
+        <temperature>2.3</temperature>
+        <humidity>75</humidity>
+        <pressure>1012</pressure>
+        <wind_speed>20</wind_speed>
+        <wind_direction>120</wind_direction>
+        <rainfall>0</rainfall>
+      </reading>
+    </readings>
+  </station>
+</weather_station>
