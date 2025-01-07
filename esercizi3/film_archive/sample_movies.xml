@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="movie_archive.xsd">
+  <movie id="FILM-12345">
+    <title>Inception</title>
+    <year>2010</year>
+    <genre>Science Fiction</genre>
+    <duration>148</duration>
+    <directors>
+      <director>
+        <firstName>Christopher</firstName>
+        <lastName>Nolan</lastName>
+      </director>
+    </directors>
+    <actors>
+      <actor>
+        <firstName>Leonardo</firstName>
+        <lastName>DiCaprio</lastName>
+        <role>Dom Cobb</role>
+      </actor>
+      <actor>
+        <firstName>Joseph</firstName>
+        <lastName>Gordon-Levitt</lastName>
+        <role>Arthur</role>
+      </actor>
+    </actors>
+    <reviews>
+      <review>
+        <date>2010-07-16</date>
+        <rating>9</rating>
+        <text>Amazing movie!</text>
+      </review>
+      <review>
+        <date>2011-01-01</date>
+        <rating>8</rating>
+        <text>Great visuals and story.</text>
+      </review>
+    </reviews>
+  </movie>
+</movies>
