@@ -1,0 +1,47 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="blood_tests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="patient">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="surname" type="xs:string"/>
+              <xs:element name="tax_code" type="xs:string"/>
+              <xs:element name="sex" type="xs:string"/>
+              <xs:element name="age" type="xs:integer"/>
+              <xs:element name="blood_sample">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="date_time" type="xs:dateTime"/>
+                    <xs:element name="location" type="xs:string"/>
+                    <xs:element name="tests">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="test" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="analysis_date_time" type="xs:dateTime"/>
+                                <xs:element name="operator_code" type="xs:string"/>
+                                <xs:element name="instruments" type="xs:string"/>
+                                <xs:element name="analysis_name" type="xs:string"/>
+                                <xs:element name="result_value" type="xs:decimal"/>
+                                <xs:element name="unit" type="xs:string"/>
+                                <xs:element name="reference_min" type="xs:decimal"/>
+                                <xs:element name="reference_max" type="xs:decimal"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

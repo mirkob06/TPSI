@@ -1,0 +1,35 @@
+<blood_tests>
+  <patient>
+    <name>John</name>
+    <surname>Doe</surname>
+    <tax_code>ABC123XYZ456</tax_code>
+    <sex>M</sex>
+    <age>30</age>
+    <blood_sample>
+      <date_time>2025-01-01T08:00:00</date_time>
+      <location>hospital</location>
+      <tests>
+        <test>
+          <analysis_date_time>2025-01-01T10:00:00</analysis_date_time>
+          <operator_code>123456789</operator_code>
+          <instruments>12345</instruments>
+          <analysis_name>Glucose</analysis_name>
+          <result_value>90</result_value>
+          <unit>mg/dL</unit>
+          <reference_min>70</reference_min>
+          <reference_max>110</reference_max>
+        </test>
+        <test>
+          <analysis_date_time>2025-01-01T11:00:00</analysis_date_time>
+          <operator_code>987654321</operator_code>
+          <instruments>54321</instruments>
+          <analysis_name>Cholesterol</analysis_name>
+          <result_value>200</result_value>
+          <unit>mg/dL</unit>
+          <reference_min>100</reference_min>
+          <reference_max>200</reference_max>
+        </test>
+      </tests>
+    </blood_sample>
+  </patient>
+</blood_tests>
