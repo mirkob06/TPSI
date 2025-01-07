@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="warehouse">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Warehouse identifier -->
+        <xs:element name="id">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[A-Z]{3}\d{4}" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        <!-- List of product categories -->
+        <xs:element name="categories">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="category" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="products">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="product" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="code">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:pattern value="PRD-\d{3}-[A-Z]{3}" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="description" type="xs:string" />
+                                <xs:element name="price" type="xs:decimal" />
+                                <xs:element name="quantity" type="xs:nonNegativeInteger" />
+                                <xs:element name="expiryDate" type="xs:date" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- Operations log -->
+        <xs:element name="operations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="operation" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="date" type="xs:date" />
+                    <xs:element name="time" type="xs:time" />
+                    <xs:element name="productCode" type="xs:string" />
+                    <xs:element name="quantity" type="xs:integer" />
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="ENTRATA" />
+                          <xs:enumeration value="USCITA" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
