@@ -1,0 +1,31 @@
+{
+    "catalog": [
+        {
+            "title": "To Kill a Mockingbird",
+            "authors": ["Harper Lee"],
+            "genre": "Fiction",
+            "ISBN": "9780061120084",
+            "publication_year": 1960,
+            "pages": 281,
+            "language": "en"
+        },
+        {
+            "title": "Il Gattopardo",
+            "authors": ["Giuseppe Tomasi di Lampedusa"],
+            "genre": "Historical Fiction",
+            "ISBN": "9788804672408",
+            "publication_year": 1958,
+            "pages": 432,
+            "language": "it"
+        },
+        {
+            "title": "1984",
+            "authors": ["George Orwell"],
+            "genre": "Dystopian",
+            "ISBN": "9780451524935",
+            "publication_year": 1949,
+            "pages": 328,
+            "language": "en"
+        }
+    ]
+}
