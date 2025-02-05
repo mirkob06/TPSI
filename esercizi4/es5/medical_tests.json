@@ -1,0 +1,40 @@
+{
+    "medical_tests": [
+        {
+            "patient_name": "John Doe",
+            "datetime": "2024-02-04T07:30:00Z",
+            "test_type": "Blood Sugar",
+            "result_value": 90,
+            "unit": "mg/dL",
+            "reference_range": "70-100",
+            "status": "ok"
+        },
+        {
+            "patient_name": "Jane Smith",
+            "datetime": "2024-02-04T08:00:00Z",
+            "test_type": "Cholesterol",
+            "result_value": 210,
+            "unit": "mg/dL",
+            "reference_range": "120-200",
+            "status": "value high"
+        },
+        {
+            "patient_name": "Alice Johnson",
+            "datetime": "2024-02-05T09:15:00Z",
+            "test_type": "Hemoglobin",
+            "result_value": 13.5,
+            "unit": "g/dL",
+            "reference_range": "12-16",
+            "status": "ok"
+        },
+        {
+            "patient_name": "Bob Martin",
+            "datetime": "2024-02-05T11:00:00Z",
+            "test_type": "Vitamin D",
+            "result_value": 18,
+            "unit": "ng/mL",
+            "reference_range": "20-50",
+            "status": "too low"
+        }
+    ]
+}
