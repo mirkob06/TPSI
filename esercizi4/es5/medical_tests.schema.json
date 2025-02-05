@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Medical Test Results Schema",
+    "type": "object",
+    "properties": {
+        "medical_tests": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "patient_name": { "type": "string" },
+                    "datetime": { "type": "string", "format": "date-time" },
+                    "test_type": { "type": "string" },
+                    "result_value": { "type": "number" },
+                    "unit": { "type": "string" },
+                    "reference_range": { "type": "string" },
+                    "status": { "type": "string" }
+                },
+                "required": ["patient_name", "datetime", "test_type", "result_value", "unit", "reference_range", "status"]
+            }
+        }
+    },
+    "required": ["medical_tests"]
+}

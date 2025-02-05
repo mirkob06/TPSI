@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Library Catalog Schema",
+    "type": "object",
+    "properties": {
+        "catalog": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": { "type": "string" },
+                    "authors": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "genre": { "type": "string" },
+                    "ISBN": { "type": "string" },
+                    "publication_year": { "type": "integer" },
+                    "pages": { "type": "integer" },
+                    "language": {
+                        "type": "string",
+                        "enum": ["it", "en", "fr", "es", "de"]
+                    }
+                },
+                "required": ["title", "authors", "genre", "ISBN", "publication_year", "pages", "language"]
+            }
+        }
+    },
+    "required": ["catalog"]
+}

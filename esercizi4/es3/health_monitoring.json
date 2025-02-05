@@ -1,0 +1,28 @@
+{
+    "health_monitoring": [
+        {
+            "datetime": "2024-02-04T08:00:00Z",
+            "measurement_type": "Blood Pressure",
+            "value": "120/80",
+            "notes": "Normal reading"
+        },
+        {
+            "datetime": "2024-02-04T12:00:00Z",
+            "measurement_type": "Heart Rate",
+            "value": 75,
+            "notes": "At rest"
+        },
+        {
+            "datetime": "2024-02-05T07:45:00Z",
+            "measurement_type": "Glucose Level",
+            "value": 95,
+            "notes": "Fasting"
+        },
+        {
+            "datetime": "2024-02-05T18:30:00Z",
+            "measurement_type": "Body Temperature",
+            "value": 36.7,
+            "notes": "Normal"
+        }
+    ]
+}
